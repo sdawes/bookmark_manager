@@ -6,8 +6,8 @@
   </head>
 
   <body>
-    <% if @current_user %>
-      Welcome, <%= @current_user.email %>
+    <% if current_user %>
+      Welcome, <%= current_user.email %>
       <% end %>
       <%= yield %> <!-- This then yields to the view which has been called by the controller -->
   </body>
