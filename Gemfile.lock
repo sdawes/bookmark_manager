@@ -81,7 +81,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (10.4.2)
+    rake (11.2.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -126,7 +126,7 @@ DEPENDENCIES
   sinatra
 
 RUBY VERSION
-   ruby 2.2.3p173
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.12.5
