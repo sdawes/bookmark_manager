@@ -14,7 +14,7 @@ class Bookmarks < Sinatra::Base
 
   helpers do
     def current_user
-      @current_user ||= User.get(session[:user_id])
+      @current_user ||= User.get(session[:user_id]) # doens't have to be an instance variable at this stage
     end
   end
 
@@ -36,7 +36,7 @@ class Bookmarks < Sinatra::Base
       session[:user_id] = @user.id
       redirect '/links'
     else
-      flash.now[:notice] = 'Your passwords do not match, please try again.'
+      flash.now[:errors] = @user.errors.full_messages
       erb :'/users/new_user'
     end
   end

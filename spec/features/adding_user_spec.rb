@@ -23,4 +23,10 @@ feature 'Singing in a user' do
   scenario 'has a valid email address' do
     expect{ sign_in(email: 'freddy.gmail.com') }.not_to change(User, :count)
   end
+
+  scenario 'cannot sign up with an already registered user' do
+    sign_in
+    expect{ sign_in(email: 'joe.bloggs@email.com') }.not_to change(User, :count)
+    expect(page).to have_content 'Email is already taken'
+  end
 end
