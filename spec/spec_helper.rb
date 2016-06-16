@@ -8,12 +8,13 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'database_cleaner'
-require 'features/web_helper'
+require_relative 'helpers/session'
 
 Capybara.app = Bookmarks
 
 RSpec.configure do |config|
 
+  config.include SessionHelpers
   config.include Capybara::DSL
 
   config.expect_with :rspec do |expectations|
