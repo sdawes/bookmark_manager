@@ -8,4 +8,11 @@ feature 'Singing in a user' do
   scenario 'requires a confirmation password' do
     expect{ sign_in(password_confirmation: 'incorrect') }.not_to change(User, :count)
   end
+
+  scenario 'shows error message if passwords don\'t match' do
+    sign_in(password_confirmation: 'incorrect')
+    expect(page.current_path).to eq '/users'
+    expect(page).to have_content 'Your passwords do not match, please try again.' 
+
+  end
 end
