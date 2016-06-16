@@ -19,4 +19,13 @@ class User
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
+
+  def self.authenticate(email, password)
+    user = first(email: email) # email: is the property :email defined above (header of table)
+    if user && BCrypt::Password.new(user.password_digest) == password
+      user
+    else
+      nil
+    end
+  end
 end
