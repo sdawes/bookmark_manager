@@ -81,7 +81,11 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+<<<<<<< HEAD
     rake (10.4.2)
+=======
+    rake (11.2.2)
+>>>>>>> b35914ebd2f96793a533e3c5c5c80210e9b67766
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -101,8 +105,11 @@ GEM
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+<<<<<<< HEAD
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+=======
+>>>>>>> b35914ebd2f96793a533e3c5c5c80210e9b67766
     stringex (1.5.1)
     templater (1.0.0)
       diff-lcs (>= 1.1.2)
@@ -126,10 +133,16 @@ DEPENDENCIES
   rspec
   rspec-sinatra
   sinatra
+<<<<<<< HEAD
   sinatra-flash
 
 RUBY VERSION
    ruby 2.2.3p173
+=======
+
+RUBY VERSION
+   ruby 2.3.1p112
+>>>>>>> b35914ebd2f96793a533e3c5c5c80210e9b67766
 
 BUNDLED WITH
    1.12.5
