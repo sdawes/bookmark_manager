@@ -9,8 +9,7 @@ class User
 
   property :id,     Serial
   property :email,  String
-
-  property :password_digest, String, length: 60
+  property :password_digest, Text, length: 60
 
   def password=(password)
     @password = password
