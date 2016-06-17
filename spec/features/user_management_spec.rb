@@ -1,5 +1,3 @@
-require './spec/web_helper.rb'
-
 feature 'User sign up' do
   scenario 'so I can sign up as a new user' do
     expect { sign_up }.to change(User, :count).by(1)
